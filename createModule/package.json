@@ -1,13 +1,13 @@
 {
   "name": "createmodule",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is import & export JS Module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Md Sofian Hasan",
   "license": "ISC",
-  "type": "commonjs"
+  "type": "module"
 }
