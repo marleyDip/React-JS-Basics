@@ -1,4 +1,7 @@
 import "./App.css";
+
+import { blogData } from "./data/blog-data";
+
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -17,7 +20,8 @@ function App() {
       </Header>
 
       {/* <Header email="dip.akand9899@gmail.com" phone="01689190142" /> */}
-      <Container fluid>
+
+      {/* <Container fluid>
         <Container>
           <Row>
             <Col className="col-12 text-center py-4">
@@ -79,9 +83,33 @@ function App() {
             </Col>
           </Row>
         </Container>
+      </Container> */}
+
+      <Container>
+        <Row>
+          {blogData.map((v, i) => {
+            return <ProductItems pItems={v} key={i} />;
+          })}
+        </Row>
       </Container>
+
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+function ProductItems({ pItems }) {
+  return (
+    <div className="col-lg-3 mb-4 mt-4">
+      <Card>
+        <Card.Body className="border border-2 border-danger">
+          <Card.Title>{pItems.title}</Card.Title>
+          <Card.Text>{pItems.body}</Card.Text>
+          <Button variant="primary">Go somewhere</Button>
+        </Card.Body>
+      </Card>
+    </div>
+  );
+}
