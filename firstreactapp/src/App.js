@@ -5,8 +5,16 @@ import Header from "./Header";
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
 function App() {
+  let headerInfo = {
+    email: "dip.akand9899@gmail.com",
+    phone: "01689190142",
+  };
+
   return (
     <div className="main">
+      <Header headerInfo={headerInfo} cName="Z-Index Tech Company" />
+
+      {/* <Header email="dip.akand9899@gmail.com" phone="01689190142" /> */}
       <Container fluid>
         <Container>
           <Row>
