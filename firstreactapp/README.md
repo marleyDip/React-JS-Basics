@@ -13,3 +13,7 @@
 ## props & children props
 
 <img width="1745" height="565" alt="image" src="https://github.com/user-attachments/assets/274bf2f8-787f-4cc5-a0cb-5d74573db234" />
+
+## Pass an object to a child component from an array of 100 objects 
+
+<img width="1710" height="928" alt="image" src="https://github.com/user-attachments/assets/d17fe9ed-0155-42f8-9c68-35453b2c404a" />
