@@ -9,3 +9,7 @@
 ## Reactive Bootstrap 
 
 <img width="1576" height="422" alt="image" src="https://github.com/user-attachments/assets/4ec76746-5635-4d58-a454-e7501127496f" />
+
+## props & children props
+
+<img width="1745" height="565" alt="image" src="https://github.com/user-attachments/assets/274bf2f8-787f-4cc5-a0cb-5d74573db234" />
