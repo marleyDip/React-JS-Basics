@@ -11,10 +11,12 @@
 //console.log(headerInfo, cName);
 
 // Now Direct Destructuring instead of props
-function Header({ headerInfo, cName }) {
+function Header({ headerInfo, cName, children }) {
   return (
     <div>
-      <h1>Welcome to {cName}</h1>
+      <h1>
+        {children} {cName}
+      </h1>
 
       <h2>Founder By Md Sofian Hasan.</h2>
 

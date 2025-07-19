@@ -12,7 +12,9 @@ function App() {
 
   return (
     <div className="main">
-      <Header headerInfo={headerInfo} cName="Z-Index Tech Company" />
+      <Header headerInfo={headerInfo} cName="Z-Index Tech Company">
+        Welcome to
+      </Header>
 
       {/* <Header email="dip.akand9899@gmail.com" phone="01689190142" /> */}
       <Container fluid>
