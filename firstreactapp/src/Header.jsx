@@ -9,11 +9,13 @@
 // object destructure
 //let { headerInfo, cName } = props;
 //console.log(headerInfo, cName);
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelopesBulk, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 // Now Direct Destructuring instead of props
 function Header({ headerInfo, cName, children }) {
   return (
-    <div>
+    <div className="text-center py-10">
       <h1>
         {children} {cName}
       </h1>
@@ -21,7 +23,11 @@ function Header({ headerInfo, cName, children }) {
       <h2>Founder By Md Sofian Hasan.</h2>
 
       <h3>
-        Company: {headerInfo.email} || {headerInfo.phone}
+        Company:{" "}
+        <FontAwesomeIcon icon={faEnvelopesBulk} className="text-danger" />{" "}
+        {headerInfo.email} ||{" "}
+        <FontAwesomeIcon icon={faPhone} className="text-danger" />{" "}
+        {headerInfo.phone}
       </h3>
 
       {/* <h3>

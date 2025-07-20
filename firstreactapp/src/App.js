@@ -7,6 +7,13 @@ import Header from "./Header";
 
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faResearchgate,
+  faSearchengin,
+} from "@fortawesome/free-brands-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 function App() {
   let headerInfo = {
     email: "dip.akand9899@gmail.com",
@@ -16,7 +23,8 @@ function App() {
   return (
     <div className="main">
       <Header headerInfo={headerInfo} cName="Z-Index Tech Company">
-        Welcome to
+        Welcome to {""}
+        <FontAwesomeIcon icon={faSearch} className="text-danger" />
       </Header>
 
       {/* <Header email="dip.akand9899@gmail.com" phone="01689190142" /> */}
