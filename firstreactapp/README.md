@@ -17,3 +17,7 @@
 ## Pass an object to a child component from an array of 100 objects 
 
 <img width="1710" height="928" alt="image" src="https://github.com/user-attachments/assets/d17fe9ed-0155-42f8-9c68-35453b2c404a" />
+
+## Font Awesome 
+
+<img width="1193" height="201" alt="image" src="https://github.com/user-attachments/assets/3696c947-c5b5-44ff-b3c0-fc6d93dfc27a" />
