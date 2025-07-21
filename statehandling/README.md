@@ -8,7 +8,7 @@
 
 ## Show & Hide Password Project
 
-<img width="625" height="300" alt="image" src="https://github.com/user-attachments/assets/3ac0b83e-952c-47da-a14c-7c8d0206eb6d" />
+<img width="1497" height="300" alt="image" src="https://github.com/user-attachments/assets/3ac0b83e-952c-47da-a14c-7c8d0206eb6d" />
 
-<img width="623" height="307" alt="image" src="https://github.com/user-attachments/assets/44d5dd0e-ff04-46ea-be53-a2883e92cc8c" />
+<img width="1497" height="307" alt="image" src="https://github.com/user-attachments/assets/44d5dd0e-ff04-46ea-be53-a2883e92cc8c" />
 
