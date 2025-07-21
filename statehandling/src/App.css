@@ -70,9 +70,9 @@
 
 .menu {
   width: 80%;
-  text-align: left;
+  text-align: center;
   left: -100%;
-  height: 10vh;
+  height: 100vh;
   position: fixed;
   list-style: none;
   background-color: aqua;
@@ -85,12 +85,13 @@
 
 .menu ul {
   justify-content: center;
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
+  gap: 30px;
 }
 
 .menu ul li {
+  margin-bottom: 50px;
+  font: bold;
+  font-size: 30px;
   list-style: none;
   padding: 10px 0px;
 } 
