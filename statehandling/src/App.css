@@ -1,5 +1,5 @@
 .App {
-  text-align: left;
+  text-align: center;
 }
 
 .App-logo {
@@ -127,8 +127,43 @@
 
 .showModelDiv {
   top: 50%;
+  cursor: pointer;
 }
 .en {
   position: fixed;
   top: 100px;
+}
+
+.faqOuter {
+  width: 1320px;
+  margin: auto;
+}
+
+.faqItems {
+  border: 1px solid red;
+  margin-bottom: 20px;
+}
+
+.faqItems h2 {
+  margin: 0px;
+  padding: 10px;
+  background-color: #282c34;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.faqItems p{
+  text-align: left;
+  height: 0px;
+  padding: 0px;
+  margin: 0px;
+  transform: scaleY(0);
+  transition: 0.5s;
+}
+
+.activeAns {
+  height: auto !important;
+  transform: scale(1) !important;
+  padding: 10px !important;
 }

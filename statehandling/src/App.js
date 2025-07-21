@@ -1,6 +1,7 @@
 import "./App.css";
 import btnModule from "./Button.module.css";
 import { useState } from "react";
+import { questions } from "./Data/faqQuestion";
 
 function App() {
   /*  let [status, setStatus] = useState(false);
@@ -13,10 +14,34 @@ function App() {
 
   let [modalStatus, setModalStatus] = useState(false);
 
+  let [showAns, setShowAns] = useState(questions[0].id);
+
   return (
     <div className="App">
+      {/* Create Faq Using State Project */}
+      <div>
+        <h1>Frequently Asked Question (FAQs)</h1>
+
+        <div className="faqOuter">
+          {questions.map((faqItems, i) => {
+            return (
+              <div className="faqItems">
+                <h2 onClick={() => setShowAns(faqItems.id)}>
+                  {faqItems.question}
+                </h2>
+
+                <p className={showAns === faqItems.id ? "activeAns" : ""}>
+                  {faqItems.answer}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+      {/* Create Faq Using State Project */}
+
       {/* Create Login Modal Project */}
-      <button
+      {/* <button
         className="en
       button"
         onClick={() => setModalStatus(!modalStatus)}
@@ -33,7 +58,7 @@ function App() {
           Enquiry Now{" "}
           <span onClick={() => setModalStatus(!modalStatus)}>&times;</span>
         </h3>
-      </div>
+      </div> */}
       {/* Create Login Modal Project */}
 
       {/* Responsive Menu Project */}
