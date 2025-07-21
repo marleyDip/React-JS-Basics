@@ -2,6 +2,7 @@ import "./App.css";
 import btnModule from "./Button.module.css";
 import { useState } from "react";
 import { questions } from "./Data/faqQuestion";
+import Faqs from "./Faqs.jsx";
 
 function App() {
   /*  let [status, setStatus] = useState(false);
@@ -12,20 +13,26 @@ function App() {
     setPStatus(!pStatus);
   }; */
 
-  let [modalStatus, setModalStatus] = useState(false);
+  //let [modalStatus, setModalStatus] = useState(false);
 
   let [showAns, setShowAns] = useState(questions[0].id);
 
   return (
     <div className="App">
-      {/* Create Faq Using State Project */}
+      {/* Create Faq With Props drilling Project */}
       <div>
+        <Faqs />
+      </div>
+      {/* Create Faq With Props drilling Project */}
+
+      {/* Create Faq Using State Project */}
+      {/* <div>
         <h1>Frequently Asked Question (FAQs)</h1>
 
         <div className="faqOuter">
           {questions.map((faqItems, i) => {
             return (
-              <div className="faqItems">
+              <div className="faqItems" key={faqItems.id}>
                 <h2 onClick={() => setShowAns(faqItems.id)}>
                   {faqItems.question}
                 </h2>
@@ -37,7 +44,7 @@ function App() {
             );
           })}
         </div>
-      </div>
+      </div> */}
       {/* Create Faq Using State Project */}
 
       {/* Create Login Modal Project */}
