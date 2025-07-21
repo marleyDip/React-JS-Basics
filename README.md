@@ -22,7 +22,7 @@
 
 <img width="1193" height="201" alt="image" src="https://github.com/user-attachments/assets/3696c947-c5b5-44ff-b3c0-fc6d93dfc27a" />
 
-## Hooks - UseState() & if - else condinition3
+## Hooks - UseState() & if - else Condinition
 
 <img width="835" height="383" alt="image" src="https://github.com/user-attachments/assets/a4eacf6d-3e24-4327-8a80-1f27994a93dc" />
 
