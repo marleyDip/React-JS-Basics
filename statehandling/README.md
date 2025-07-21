@@ -14,6 +14,7 @@
 
 ## Responsive Menu | Project
 
-<img width="1918" height="140" alt="image" src="https://github.com/user-attachments/assets/f6ad6ac5-c012-481b-8d6c-99fa13fb866f" />
+<img width="1918" height="712" alt="image" src="https://github.com/user-attachments/assets/f6ad6ac5-c012-481b-8d6c-99fa13fb866f" />
 
-<img width="1918" height="140" alt="image" src="https://github.com/user-attachments/assets/00f42db1-c62d-47d3-9b28-365a9a0aee8e" />
+<img width="1917" height="712" alt="image" src="https://github.com/user-attachments/assets/ca0b55cc-4aee-4267-af57-985f7aa598d9" />
+
