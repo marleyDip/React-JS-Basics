@@ -25,12 +25,13 @@ function App() {
       </button>
 
       <div
-        onClick={() => setModalStatus(false)}
+        onClick={() => setModalStatus(!modalStatus)}
         className={`modalOverLay ${modalStatus ? "showModalOverlay" : ""}`}
       ></div>
       <div className={`modelDiv ${modalStatus ? "showModelDiv" : ""}`}>
         <h3>
-          Enquiry Now <span onClick={() => setModalStatus(false)}>&times;</span>
+          Enquiry Now{" "}
+          <span onClick={() => setModalStatus(!modalStatus)}>&times;</span>
         </h3>
       </div>
       {/* Create Login Modal Project */}
