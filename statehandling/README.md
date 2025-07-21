@@ -28,4 +28,8 @@
 
 <img width="1918" height="650" alt="image" src="https://github.com/user-attachments/assets/10e89dfd-11c9-4f95-974a-eb0374288a7d" />
 
+## Create Faq With Props drilling Project
+
 <img width="1918" height="676" alt="image" src="https://github.com/user-attachments/assets/c0761fd2-931b-4096-97ca-2ede93c4c242" />
+
+<img width="1918" height="572" alt="image" src="https://github.com/user-attachments/assets/b245454c-2d33-47d8-83e7-d46778fddb41" />
