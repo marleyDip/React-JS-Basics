@@ -3,21 +3,42 @@ import btnModule from "./Button.module.css";
 import { useState } from "react";
 
 function App() {
-  let [status, setStatus] = useState(false);
+  /*  let [status, setStatus] = useState(false);
   let [pStatus, setPStatus] = useState(false);
   let [menuStatus, setMenuStatus] = useState(false);
 
   let statusData = () => {
     setPStatus(!pStatus);
-  };
+  }; */
+
+  let [modalStatus, setModalStatus] = useState(false);
 
   return (
     <div className="App">
-      {/* Responsive Menu Project */}
+      {/* Create Login Modal Project */}
+      <button
+        className="en
+      button"
+        onClick={() => setModalStatus(!modalStatus)}
+      >
+        Enquiry Now
+      </button>
 
+      <div
+        onClick={() => setModalStatus(false)}
+        className={`modalOverLay ${modalStatus ? "showModalOverlay" : ""}`}
+      ></div>
+      <div className={`modelDiv ${modalStatus ? "showModelDiv" : ""}`}>
+        <h3>
+          Enquiry Now <span onClick={() => setModalStatus(false)}>&times;</span>
+        </h3>
+      </div>
+      {/* Create Login Modal Project */}
+
+      {/* Responsive Menu Project */}
       {/* <button className="mIcon" onClick={() => setMenuStatus(!menuStatus)}>
         &#9776;
-      </button>
+      </button> 
 
       <div className={`menu ${menuStatus ? "activeMenu" : ""}`}>
         <ul>
@@ -37,8 +58,8 @@ function App() {
       </button> */}
       {/* Show & Hide Password Project */}
 
-      <br />
-      <br />
+      {/* <br />
+      <br /> */}
       {/* module style */}
       {/* <button className={btnModule.error}>Error</button>
       <button className={btnModule.warning}>Demo</button> */}
