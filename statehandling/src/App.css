@@ -56,3 +56,14 @@
   font-size: medium;
   border-color: aquamarine;
 }
+
+.input{
+  margin: 30px;
+  width: 200px;
+  height: 40px;
+  color: brown;
+  font: bold;
+  font-size: 22px;
+  border-radius: 15px;
+  border-color: blue;
+}
