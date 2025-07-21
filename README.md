@@ -27,3 +27,9 @@
 <img width="835" height="383" alt="image" src="https://github.com/user-attachments/assets/a4eacf6d-3e24-4327-8a80-1f27994a93dc" />
 
 <img width="681" height="291" alt="image" src="https://github.com/user-attachments/assets/d4e98ba5-0b7a-4322-bc2e-0806c099be3a" />
+
+## Ternary Operator - React Conditional Rendering
+
+<img width="682" height="137" alt="image" src="https://github.com/user-attachments/assets/8ffd6147-d50d-44d1-99e2-80b1dc02c15b" />
+
+<img width="1497" height="258" alt="image" src="https://github.com/user-attachments/assets/6ff67fec-3a19-4802-a21e-d3c78caf3ca5" />
