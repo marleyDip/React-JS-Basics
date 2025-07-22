@@ -118,3 +118,8 @@
 <img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/8a331455-4ced-428e-a8be-2122a2e0fe30" />
 
 <img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/002c54f7-7aeb-4b51-9dce-f21fddb0e40b" />
+
+
+## Setup 404 page for Static & Dynamic Routing
+
+<img width="1918" height="1005" alt="image" src="https://github.com/user-attachments/assets/3ea0e189-1711-4864-b745-b5ada590e847" />
