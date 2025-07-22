@@ -1,8 +1,17 @@
 import "./App.css";
-import { useState } from "react";
+import { use, useState } from "react";
+import { tabs } from "./Data/tabs";
 
 function App() {
   let [todolist, setTodolist] = useState([]);
+  let [activeTabs, setActiveTabs] = useState(0);
+  let [activeContent, setActiveContent] = useState(tabs[0]);
+
+  let changeData = (index) => {
+    //alert(index);
+    setActiveTabs(index);
+    setActiveContent(tabs[index]);
+  };
 
   let saveToDoList = (event) => {
     let toName = event.target.toName.value;
@@ -32,6 +41,33 @@ function App() {
 
   return (
     <div className="App">
+      <div className="tabsOuter">
+        <h1 style={{ textAlign: "left" }}>
+          Z-Index Next Gen Stack Ltd. Vision Mission & Values
+        </h1>
+
+        <ul>
+          {tabs.map((tabsItems, index) => {
+            return (
+              <li>
+                <button
+                  onClick={() => changeData(index)}
+                  className={activeTabs === index ? "activeButton" : ""}
+                >
+                  {tabsItems.title}
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+
+        {activeContent !== undefined ? (
+          <p className="para">{activeContent.description}</p>
+        ) : (
+          ""
+        )}
+      </div>
+
       <h1>ToDo List</h1>
 
       <form onSubmit={saveToDoList}>
