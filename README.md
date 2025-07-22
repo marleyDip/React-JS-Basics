@@ -76,6 +76,7 @@
 <img width="1918" height="572" alt="image" src="https://github.com/user-attachments/assets/b245454c-2d33-47d8-83e7-d46778fddb41" />
 
 
+
 ## Building a Todo List App Project
 
 <img width="1906" height="752" alt="image" src="https://github.com/user-attachments/assets/7e92bde6-f44c-4bc7-aaaa-3126b6adb02b" />
@@ -89,6 +90,7 @@
 <img width="1906" height="752" alt="image" src="https://github.com/user-attachments/assets/30e56a22-be7d-4b09-b855-43e64578ab05" />
 
 
+
 ## Create Tabbing Project
 
 <img width="1903" height="752" alt="image" src="https://github.com/user-attachments/assets/59b398d4-a168-4a5f-a609-a209f56147fe" />
@@ -96,3 +98,28 @@
 <img width="1903" height="752" alt="image" src="https://github.com/user-attachments/assets/3f8e4166-6c27-431c-bff1-d72644540f4c" />
 
 <img width="1903" height="752" alt="image" src="https://github.com/user-attachments/assets/72a0b652-b01c-47d3-babf-f700ab0a32b1" />
+
+
+
+## Adding a Static Routing With Link
+
+<img width="1917" height="928" alt="image" src="https://github.com/user-attachments/assets/d47a7391-61ea-4a73-96f3-90394f47834b" />
+
+<img width="1917" height="928" alt="image" src="https://github.com/user-attachments/assets/8896530e-11cb-4930-8c32-18445628c686" />
+
+<img width="1917" height="928" alt="image" src="https://github.com/user-attachments/assets/9a27d91d-a0cc-4eb6-98c2-b45fbe450d34" />
+
+
+
+## Dynamic Routes (Params "/:") with Link
+
+<img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/87be35e5-8394-4198-95b3-f055ef7529bb" />
+
+<img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/8a331455-4ced-428e-a8be-2122a2e0fe30" />
+
+<img width="1918" height="1028" alt="image" src="https://github.com/user-attachments/assets/002c54f7-7aeb-4b51-9dce-f21fddb0e40b" />
+
+
+## Setup 404 page for Static & Dynamic Routing
+
+<img width="1918" height="1005" alt="image" src="https://github.com/user-attachments/assets/3ea0e189-1711-4864-b745-b5ada590e847" />
