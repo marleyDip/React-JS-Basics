@@ -19,16 +19,9 @@
 
 ## Delete Row in Userdata State
 
-<img width="1920" height="832" alt="image" src="https://github.com/user-attachments/assets/74d65e85-214e-4bfc-8a43-685463add281" />
+<img width="1920" height="907" alt="Screenshot (43)" src="https://github.com/user-attachments/assets/a9a5221f-5871-4848-88ff-f0d280f5e52c" />
 
-<img width="1920" height="832" alt="image" src="https://github.com/user-attachments/assets/4bd91079-0df7-49eb-97db-6bb5957b3327" />
-
-
-## React Toastify
-
-<img width="1920" height="832" alt="image" src="https://github.com/user-attachments/assets/509f36d8-3423-4b73-b187-b20675751099" />
-
-<img width="1920" height="832" alt="image" src="https://github.com/user-attachments/assets/d4ed43e0-32cc-4c77-95ab-7eabd0d18e07" />
+<img width="1920" height="928" alt="Screenshot (44)" src="https://github.com/user-attachments/assets/298d65b5-6b25-49be-b66c-31a424f199a1" />
 
 
 ## Update UserRow in userData State
@@ -36,5 +29,7 @@
 <img width="1920" height="847" alt="Screenshot (40)" src="https://github.com/user-attachments/assets/40000d42-aeaf-43cd-9c5b-50ec8a20a597" />
 
 <img width="1920" height="903" alt="Screenshot (41)" src="https://github.com/user-attachments/assets/de236670-8c20-4340-bee5-6d5bd451884d" />
+
+<img width="1920" height="928" alt="Screenshot (44)" src="https://github.com/user-attachments/assets/298d65b5-6b25-49be-b66c-31a424f199a1" />
 
 
