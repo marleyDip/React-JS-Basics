@@ -20,7 +20,7 @@ function App() {
     //console.log(inputName);
     let inputValue = event.target.value; // Deep
 
-    // dynamic thats why not use => oldData.inputName
+    // dynamically change value thats why not use => oldData.inputName
     oldData[inputName] = inputValue;
     setFormData(oldData);
   };
