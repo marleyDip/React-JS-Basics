@@ -14,6 +14,8 @@
 
 ## Email or Phone Number Already Exists
 
+<img width="1918" height="987" alt="image" src="https://github.com/user-attachments/assets/9a7b8cb5-f002-403e-be4c-8190d7c4dcb3" />
+
 
 ## Delete Row in Userdata State
 
