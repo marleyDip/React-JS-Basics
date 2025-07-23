@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Col, Container, Row, Table } from "react-bootstrap";
+import { ToastContainer, toast } from "react-toastify";
 
 function App() {
   let [formData, setFormData] = useState({
@@ -43,7 +44,9 @@ function App() {
     );
 
     if (checkFilterUser.length == 1) {
-      alert("Email & Number Already Exists...");
+      //alert("Email & Number Already Exists...");
+
+      toast.error("Email & Number Already Exists...");
     } else {
       let oldUserData = [...userData, currentUserFormData]; // old Array ( [] ) + New Array Elements ( {} ) => [ {}, {}, {} ]
       console.log(oldUserData);
@@ -65,12 +68,15 @@ function App() {
 
     let filterDataAfterDelete = userData.filter((v, i) => i != indexNumber);
     //console.log(filterDataAfterDelete);
-
+    toast.success("User Data Delete!", {
+      position: "top-center",
+    });
     setUserData(filterDataAfterDelete);
   };
 
   return (
     <Container fluid>
+      <ToastContainer />
       <Container>
         <Row>
           <Col className="text-center py-5">
