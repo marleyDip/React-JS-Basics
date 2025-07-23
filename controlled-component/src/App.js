@@ -77,7 +77,7 @@ function App() {
       //console.log(formData.index);
 
       let editIndex = formData.index; // 1
-      let oldData = userData; // clone
+      let oldData = userData; // clone bcz direct not change state, it can be store to variable
 
       // check update duplicate email or phone
       let checkFilterUser = userData.filter(
