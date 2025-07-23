@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Table } from "react-bootstrap";
 
 function App() {
   let [formData, setFormData] = useState({
@@ -13,6 +13,7 @@ function App() {
 
   let [userData, setUserData] = useState([]);
 
+  // get value from form input data
   let getValue = (event) => {
     let oldData = { ...formData };
 
@@ -25,10 +26,11 @@ function App() {
     setFormData(oldData);
   };
 
+  // submit form input data
   let handleSubmit = (event) => {
     event.preventDefault();
 
-    // key - value pairs
+    // key - value pairs & here key go the array map
     let currentUserFormData = {
       uName: formData.uName,
       uEmail: formData.uEmail,
@@ -37,9 +39,10 @@ function App() {
     };
 
     let oldUserData = [...userData, currentUserFormData]; // old Array ( [] ) + New Array Elements ( {} ) => [ {}, {}, {} ]
-    setUserData(oldUserData);
+    //console.log(oldUserData);
 
-    console.log(oldUserData);
+    setUserData(oldUserData);
+    setFormData({ uName: "", uEmail: "", uPhone: "", uMessage: "", index: "" });
   };
 
   return (
@@ -112,7 +115,50 @@ function App() {
             </form>
           </Col>
 
-          <Col lg={7}></Col>
+          <Col lg={7}>
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Message</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {userData.length >= 1 ? (
+                  userData.map((obj, i) => {
+                    return (
+                      <tr key={i}>
+                        <td>{i + 1}</td>
+
+                        <td>{obj.uName}</td>
+
+                        <td>{obj.uEmail}</td>
+
+                        <td>{obj.uPhone}</td>
+
+                        <td>{obj.uMessage}</td>
+
+                        <td>
+                          <button>Delete</button>
+
+                          <button>Edit</button>
+                        </td>
+                      </tr>
+                    );
+                  })
+                ) : (
+                  <tr className="text-center ">
+                    <td colSpan={6}>No Data Found</td>
+                  </tr>
+                )}
+              </tbody>
+            </Table>
+          </Col>
         </Row>
       </Container>
     </Container>
