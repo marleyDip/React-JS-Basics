@@ -60,6 +60,15 @@ function App() {
 
   //console.log(formData);
 
+  let deleteRow = (indexNumber) => {
+    //alert(indexNumber);
+
+    let filterDataAfterDelete = userData.filter((v, i) => i != indexNumber);
+    //console.log(filterDataAfterDelete);
+
+    setUserData(filterDataAfterDelete);
+  };
+
   return (
     <Container fluid>
       <Container>
@@ -145,10 +154,10 @@ function App() {
 
               <tbody>
                 {userData.length >= 1 ? (
-                  userData.map((obj, i) => {
+                  userData.map((obj, index) => {
                     return (
-                      <tr key={i}>
-                        <td>{i + 1}</td>
+                      <tr key={index}>
+                        <td>{index + 1}</td>
 
                         <td>{obj.uName}</td>
 
@@ -159,7 +168,9 @@ function App() {
                         <td>{obj.uMessage}</td>
 
                         <td>
-                          <button>Delete</button>
+                          <button onClick={() => deleteRow(index)}>
+                            Delete
+                          </button>
 
                           <button>Edit</button>
                         </td>
