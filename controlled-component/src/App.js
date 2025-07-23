@@ -38,12 +38,27 @@ function App() {
       uMessage: formData.uMessage,
     };
 
-    let oldUserData = [...userData, currentUserFormData]; // old Array ( [] ) + New Array Elements ( {} ) => [ {}, {}, {} ]
-    //console.log(oldUserData);
+    let checkFilterUser = userData.filter(
+      (v) => v.uEmail == formData.uEmail || v.uPhone == formData.uPhone
+    );
 
-    setUserData(oldUserData);
-    setFormData({ uName: "", uEmail: "", uPhone: "", uMessage: "", index: "" });
+    if (checkFilterUser.length == 1) {
+      alert("Email & Number Already Exists...");
+    } else {
+      let oldUserData = [...userData, currentUserFormData]; // old Array ( [] ) + New Array Elements ( {} ) => [ {}, {}, {} ]
+      console.log(oldUserData);
+      setUserData(oldUserData);
+      setFormData({
+        uName: "",
+        uEmail: "",
+        uPhone: "",
+        uMessage: "",
+        index: "",
+      });
+    }
   };
+
+  //console.log(formData);
 
   return (
     <Container fluid>
