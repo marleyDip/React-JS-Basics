@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Col, Container, Row, Table } from "react-bootstrap";
+import { Button, Col, Container, Row, Table } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 
 function App() {
@@ -23,6 +23,8 @@ function App() {
     let inputValue = event.target.value; // Deep
 
     // dynamically change value thats why not use => oldData.inputName
+
+    //set a property ( key ) in an object using a variable
     oldData[inputName] = inputValue;
     setFormData(oldData);
   };
@@ -39,39 +41,106 @@ function App() {
       uMessage: formData.uMessage,
     };
 
-    let checkFilterUser = userData.filter(
-      (v) => v.uEmail == formData.uEmail || v.uPhone == formData.uPhone
-    );
+    // edit data
+    if (formData.index === "") {
+      // find insert duplicate email or phone
+      let checkFilterUser = userData.filter(
+        (v) => v.uEmail == formData.uEmail || v.uPhone == formData.uPhone
+      );
 
-    if (checkFilterUser.length == 1) {
-      //alert("Email & Number Already Exists...");
+      // check duplicate or not
+      if (checkFilterUser.length == 1) {
+        //alert("Email & Number Already Exists...");
 
-      toast.error("Email & Number Already Exists...");
+        toast.error("Email & Number Already Exists...");
+      } else {
+        // insert input data
+        let oldUserData = [...userData, currentUserFormData]; // old Array ( [] ) + New Array Elements ( {} ) => [ {}, {}, {} ]
+        //console.log(oldUserData);
+
+        toast("User Data Delete!", {
+          position: "bottom-right",
+        });
+
+        setUserData(oldUserData);
+
+        // after submit data, it goes to empty
+        setFormData({
+          uName: "",
+          uEmail: "",
+          uPhone: "",
+          uMessage: "",
+          index: "",
+        });
+      }
     } else {
-      let oldUserData = [...userData, currentUserFormData]; // old Array ( [] ) + New Array Elements ( {} ) => [ {}, {}, {} ]
-      console.log(oldUserData);
-      setUserData(oldUserData);
-      setFormData({
-        uName: "",
-        uEmail: "",
-        uPhone: "",
-        uMessage: "",
-        index: "",
-      });
+      //console.log(formData.index);
+
+      let editIndex = formData.index; // 1
+      let oldData = userData; // clone
+
+      // check update duplicate email or phone
+      let checkFilterUser = userData.filter(
+        (v, i) =>
+          (v.uEmail == formData.uEmail || v.uPhone == formData.uPhone) &&
+          i != editIndex
+      ); // && = without own record
+      console.log(checkFilterUser);
+
+      // array index = [0], [1], ... but array length = 1, 2, 3
+      if (checkFilterUser.length == 0) {
+        // [{}, {}] => choice 2nd one & update
+        oldData[editIndex]["uName"] = formData.uName;
+        oldData[editIndex]["uEmail"] = formData.uEmail;
+        oldData[editIndex]["uPhone"] = formData.uPhone;
+        oldData[editIndex]["uMessage"] = formData.uMessage;
+
+        toast.info("User Data Updated!", {
+          position: "top-left",
+        });
+
+        setUserData(oldData);
+
+        setFormData({
+          uName: "",
+          uEmail: "",
+          uPhone: "",
+          uMessage: "",
+          index: "",
+        });
+      } else {
+        toast.error("Email & Number Already Exists...");
+      }
     }
   };
 
   //console.log(formData);
 
+  // Delete User Data
   let deleteRow = (indexNumber) => {
     //alert(indexNumber);
 
     let filterDataAfterDelete = userData.filter((v, i) => i != indexNumber);
     //console.log(filterDataAfterDelete);
     toast.success("User Data Delete!", {
-      position: "top-center",
+      position: "bottom-center",
     });
     setUserData(filterDataAfterDelete);
+  };
+
+  // Edit User Data
+
+  let editRow = (indexNumber) => {
+    //alert(indexNumber);
+
+    let editData = userData.filter((v, i) => i == indexNumber)[0];
+    //console.log(editData); // {uName: 'Hasan', uMessage: ''}
+
+    // set a key "index" here bcz update it by index number below => handleSubmit() function
+    editData["index"] = indexNumber;
+    //console.log(editData); // {uName: 'Sofian', uMessage: '', index: 0}
+
+    setFormData(editData);
   };
 
   return (
@@ -145,7 +214,7 @@ function App() {
             </form>
           </Col>
 
-          <Col lg={7}>
+          <Col lg={7} className="mt-5">
             <Table striped bordered hover>
               <thead>
                 <tr>
@@ -174,11 +243,20 @@ function App() {
                         <td>{obj.uMessage}</td>
 
                         <td>
-                          <button onClick={() => deleteRow(index)}>
-                            Delete
-                          </button>
+                          <Button
+                            className="me-2"
+                            variant="warning"
+                            onClick={() => editRow(index)}
+                          >
+                            Edit
+                          </Button>
 
-                          <button>Edit</button>
+                          <Button
+                            variant="danger"
+                            onClick={() => deleteRow(index)}
+                          >
+                            Delete
+                          </Button>
                         </td>
                       </tr>
                     );
