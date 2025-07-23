@@ -1,58 +1,121 @@
-import logo from "./logo.svg";
-import "./App.css";
 import { useState } from "react";
+import "./App.css";
+import { Col, Container, Row } from "react-bootstrap";
 
 function App() {
-  let [uname, setUname] = useState("");
-  let [password, setPassword] = useState("");
+  let [formData, setFormData] = useState({
+    uName: "",
+    uEmail: "",
+    uPhone: "",
+    uMessage: "",
+    index: "",
+  });
 
-  let handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(uname, password);
+  let [userData, setUserData] = useState([]);
+
+  let getValue = (event) => {
+    let oldData = { ...formData };
+
+    let inputName = event.target.name; // uName
+    //console.log(inputName);
+    let inputValue = event.target.value; // Deep
+
+    // dynamic thats why not use => oldData.inputName
+    oldData[inputName] = inputValue;
+    setFormData(oldData);
   };
 
-  // let getUname = (event) => {
-  // console.log("hello");
-  //   setUname(event.target.value);
-  // };
+  let handleSubmit = (event) => {
+    event.preventDefault();
+
+    // key - value pairs
+    let currentUserFormData = {
+      uName: formData.uName,
+      uEmail: formData.uEmail,
+      uPhone: formData.uPhone,
+      uMessage: formData.uMessage,
+    };
+
+    let oldUserData = [...userData, currentUserFormData]; // old Array ( [] ) + New Array Elements ( {} ) => [ {}, {}, {} ]
+    setUserData(oldUserData);
+
+    console.log(oldUserData);
+  };
 
   return (
-    <div className="App">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6">
+    <Container fluid>
+      <Container>
+        <Row>
+          <Col className="text-center py-5">
+            <h1>Enquiry Form</h1>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col lg={5}>
+            {userData.length}
             <form onSubmit={handleSubmit}>
-              <div className="text-start my-3">
-                <label>UserName</label>
+              <div className="pb-3">
+                <label className="form-label">Name</label>
 
                 <input
                   type="text"
-                  value={uname}
-                  //onChange={getUname}
-                  onChange={(event) => setUname(event.target.value)}
+                  value={formData.uName}
+                  onChange={getValue}
+                  name="uName"
                   className="form-control"
                 />
               </div>
 
-              <div className="text-start my-3">
-                <label>Password</label>
+              <div className="pb-3">
+                <label className="form-label">Email</label>
 
                 <input
-                  type="text"
-                  value={password}
-                  onChange={(event) => setPassword(event.target.value)}
+                  type="email"
+                  onChange={getValue}
+                  value={formData.uEmail}
+                  name="uEmail"
                   className="form-control"
                 />
               </div>
 
-              <div className="text-start my-3">
-                <button>Login</button>
+              <div className="pb-3">
+                <label className="form-label">Phone</label>
+
+                <input
+                  type="text"
+                  value={formData.uPhone}
+                  onChange={getValue}
+                  name="uPhone"
+                  className="form-control"
+                />
               </div>
+
+              <div className="mb-3">
+                <label htmlFor="" className="form-label">
+                  Message
+                </label>
+
+                <textarea
+                  className="form-control"
+                  value={formData.uMessage}
+                  onChange={getValue}
+                  name="uMessage"
+                  id=""
+                  rows="3"
+                />
+              </div>
+
+              <button className="btn btn-primary">
+                {formData.index !== "" ? "Update" : "Save"}
+              </button>
             </form>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Col>
+
+          <Col lg={7}></Col>
+        </Row>
+      </Container>
+    </Container>
   );
 }
 
