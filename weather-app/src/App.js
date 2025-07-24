@@ -3,18 +3,31 @@ import "./App.css";
 
 function App() {
   let [city, setCity] = useState("");
+  let [weatherDetails, setWeatherDetails] = useState();
+  let [isLoading, setIsLoading] = useState(false);
 
   let getData = (event) => {
     event.preventDefault();
     //console.log(city);
 
+    setIsLoading(true);
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=751d66e130befad396405dc13796a57c`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=751d66e130befad396405dc13796a57c&units=metric`
     )
       .then((res) => res.json())
       .then((data) => {
         // handle the data here
-        console.log(data);
+
+        //console.log(data);
+        //console.log(data.cod);
+
+        if (data.cod == "404") {
+          setWeatherDetails(undefined);
+        } else {
+          setWeatherDetails(data);
+        }
+
+        setIsLoading(false);
       });
     setCity("");
   };
@@ -40,16 +53,39 @@ function App() {
           </button>
         </form>
 
-        <div className="w-[400px] mx-auto bg-white shadow-lg mt-[40px] p-[25px]">
-          <h3 className="font-bold text-[30px]">
-            Dhaka <span className="bg-[yellow]">BD</span>
-          </h3>
+        <div className="w-[400px] mx-auto bg-emerald-500 shadow-xl mt-[40px] p-[25px] relative">
+          <img
+            src="https://media.tenor.com/2hNqKj3ArX8AAAAi/loading.gif"
+            alt="Loading"
+            width={100}
+            className={`absolute left-[40%] ${isLoading ? "" : "hidden"} `}
+          />
 
-          <h2 className="font-bold text-[40px]">9.62oc</h2>
+          {weatherDetails !== undefined ? (
+            <>
+              <h3 className="font-bold text-[30px]">
+                {weatherDetails.name}{" "}
+                <span className="bg-[yellow]">
+                  {weatherDetails.sys.country}
+                </span>
+              </h3>
 
-          <img src="http://openweathermap.org/img/w/50d.png" alt="" />
+              <h2 className="font-bold text-[40px]">
+                {weatherDetails.main.temp}
+              </h2>
 
-          <p>Fog</p>
+              <img
+                src={`http://openweathermap.org/img/w/${weatherDetails.weather[0].icon}.png`}
+                alt=""
+              />
+
+              <p className="font-bold font-serif">
+                {weatherDetails.weather[0].description}
+              </p>
+            </>
+          ) : (
+            <div className="font-bold font-mono">City Not Found</div>
+          )}
         </div>
       </div>
     </div>
